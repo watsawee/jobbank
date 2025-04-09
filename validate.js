@@ -1,3 +1,4 @@
+
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
   if(isNaN(nid)){
@@ -77,7 +78,33 @@ function validateForm() {
 	// ถ้าผ่านการตรวจสอบอื่นๆ ก็สามารถส่งแบบฟอร์มต่อได้
 	return true;
   }
-  function calculateWeeklyPay() {
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // ป้องกันการส่งแบบฟอร์มแบบดั้งเดิม
+
+    // ตรวจสอบความถูกต้องของข้อมูลด้วย validateForm() (ตามที่คุณมีอยู่)
+    if (validateForm()) {
+        // ถ้าข้อมูลถูกต้อง ให้ส่งไปยัง Servlet เพื่อคำนวณค่าตอบแทน
+        fetch('/calculatePay', {
+            method: 'POST',
+            body: new FormData(this), // ส่งข้อมูลแบบฟอร์ม
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error); // แสดงข้อผิดพลาดจากเซิร์ฟเวอร์
+            } else if (data.weeklyPay) {
+                alert(`อัตราค่าตอบแทนต่อสัปดาห์โดยประมาณ: ${data.weeklyPay} บาท`);
+                // คุณอาจต้องการทำการ Redirect หรือดำเนินการอื่นๆ ต่อไป
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('เกิดข้อผิดพลาดในการสื่อสารกับเซิร์ฟเวอร์');
+        });
+    }
+});
+function calculateWeeklyPay() {
 	const yearSelect = document.getElementById("year");
 	const selectedYearValue = yearSelect.value;
 	const workDaysInput = document.getElementById("workDays");
@@ -143,4 +170,6 @@ function validateForm() {
   
 	return true; // อนุญาตให้ส่งแบบฟอร์ม (หากต้องการ)
   }
+
+
 
