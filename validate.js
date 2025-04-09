@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
+  if(nid.length != 13 && /^[0-9]+$/.test(nid)){
 	return false;
   }else{
 	return true;
@@ -18,7 +18,7 @@ function checkWorkDays() {
 
 function validateForm(){
 	if(!checkNID()){
-	  alert("Invalid value for National ID!");
+	  alert("Invalid value for National ID! Please enter a 13-digit number only.");
 	  document.getElementById("nid").focus();
 	  return false;
 	}else{
