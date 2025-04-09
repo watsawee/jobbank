@@ -18,6 +18,8 @@ function validateGender() {
 	return genderSelected !== null;
  }
 
+  
+
 function validateForm(){
 	if (!validateGender()) {
 		alert("Please select your gender: Male, Female, or Other.");
@@ -34,7 +36,7 @@ function validateForm(){
 			return false;
 		}else{
 			total = payRateCalculate();
-			alert("Your weekly pay rate is "+total+" THB");
+			//alert("Your weekly pay rate is "+total+" THB");
 			return false;
 		}
 	}
