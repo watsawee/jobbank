@@ -1,10 +1,12 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
-  }
+    let nid = (document.getElementById("nid").value).trim();
+
+    const nidPattern = /^\d{13}$/;
+    if (!nidPattern.test(nid)) {
+      return false;
+    } else {
+      return true;
+    }
 }
 
 function checkWorkDays() {
@@ -18,7 +20,7 @@ function checkWorkDays() {
 
 function validateForm(){
 	if(!checkNID()){
-	  alert("Invalid value for National ID!");
+	  alert("กรุณากรอกหมายเลขบัตรประชาชนให้ครบ 13 หลัก");
 	  document.getElementById("nid").focus();
 	  return false;
 	}else{
