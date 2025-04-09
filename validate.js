@@ -41,9 +41,10 @@ function validateForm(){
 	  document.getElementById("workDays").focus();
 	  return false;
 	} else {
-	  total = payRateCalculate();
+	  let total = payRateCalculate();
+	  if (total > 0) {
 	  alert("Your weekly pay rate is " + total + " THB");
-	  return false;
+	 }return false;
 	}
   }
   
