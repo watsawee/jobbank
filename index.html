@@ -37,22 +37,18 @@
   
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
-        <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
-    </div>
-    <div class="mb-3 mt-3">
-        <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="fname" name="fname"required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+        <input type="text" class="form-control" id="lname" name="lname"required/>
     </div>
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
-		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
+        <input type="radio" class="form-check-input" id="gender1" name="genderRad"required value="1">&nbsp; Male &nbsp;&nbsp;
+		    <input type="radio" class="form-check-input" id="gender2" name="genderRad"required value="2">&nbsp; Female &nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender3" name="genderRad"required value="3">&nbsp; Other
     </div>
     <div class="mb-3 mt-3">
         <label for="school" class="form-label">School<span style="color:red">*</span></label>
@@ -73,10 +69,11 @@
       </select>
     </div>
     <div class="mb-3 mt-3">
-        <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
-        <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays"/>
-    </div>
+      <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
+      <span style="color:red">*</span></label>
+      <input type="number" class="form-control" id="workDays" name="workDays" min="1" max="6" required/>
+  </div>
+
 	
     <button type="submit" class="btn btn-primary">Register</button>
     <button type="reset" class="btn btn-primary">Reset</button>
@@ -84,4 +81,9 @@
 </div>
 
 </body>
-</html>
+</html> <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="nid" name="nid"required maxlength="13"/>
+    </div>
+    <div class="mb-3 mt-3">
+      
+<!--รีเซตอยู่แล้ว-->
