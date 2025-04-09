@@ -10,14 +10,11 @@ function checkRequiredFields() {
 	return true;
   }
 
-function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
+  function checkNID() {
+	let nid = (document.getElementById("nid").value).trim();
+	return !isNaN(nid) && nid.length === 13;
   }
-}
+  
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
