@@ -23,7 +23,7 @@ function payRateCalculate() {
       break;
   }
 
-  
+    // คำนวณค่าตอบแทนต่อสัปดาห์ (8 ชั่วโมงต่อวัน)
   let weeklyPay = hourlyRate * 8 * workDays;
 
   return weeklyPay;  
