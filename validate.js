@@ -7,14 +7,14 @@ function checkNID() {
 	}
   }
 
-function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  function checkWorkDays() {
+	let num = (document.getElementById("workDays").value).trim();
+	if (isNaN(num) || num < 1 || num > 6) {
+	  return false;  // ต้องเป็นตัวเลขที่ระหว่าง 1 ถึง 6
+	} else {
+	  return true;
+	}
   }
-}
 
 function validateForm(){
 	if(!checkNID()){
