@@ -2,9 +2,17 @@ function payRateCalculate() {
   let workDays = (document.getElementById("workDays").value).trim();
   let selectObj = document.getElementById("year");
   let yearOfStudy = parseInt(selectObj.options[selectObj.selectedIndex].value);
-  //alert("yearOfStudy = "+yearOfStudy);
-  
-  return 0;
+
+  let rate;
+  switch (yearOfStudy) {
+    case 1: rate = 55; break;
+    case 2: rate = 65; break;
+    case 3: rate = 75; break;
+    case 4: rate = 85; break;
+    default: rate = 0; break;
+  }
+
+  return rate * workDays; // คำนวณค่าเงินรวม
 }
 
 
