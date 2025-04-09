@@ -9,7 +9,7 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1 || num > 6) {
     return false;
   } else {
 	return true;
@@ -23,7 +23,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
+		  alert("Invalid value for days of work! Please enter a number between 1-6 only.");
 		  document.getElementById("workDays").focus();
 		  return false;
 		}else{
