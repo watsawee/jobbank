@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
+  if (isNaN(nid) || nid.length !== 13) {
 	return false;
   }else{
 	return true;
@@ -9,7 +9,8 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  let numWorkDays = parseInt(num);
+  if (isNaN(numWorkDays) || numWorkDays < 1 || numWorkDays > 6 ){
     return false;
   } else {
 	return true;
@@ -18,12 +19,12 @@ function checkWorkDays() {
 
 function validateForm(){
 	if(!checkNID()){
-	  alert("Invalid value for National ID!");
+	  alert("Invalid value for National ID! it must be 13 digits.");
 	  document.getElementById("nid").focus();
 	  return false;
 	}else{
 		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
+		  alert("Invalid value for days of work! between 1 and 6");
 		  document.getElementById("workDays").focus();
 		  return false;
 		}else{
