@@ -38,7 +38,7 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid" required/>
+        <input type="text" class="form-control" id="nid" name="nid" pattern="\d{13}" maxlength="13" minlength="13" required title="Please enter 13 digits of your national ID card number (numbers only)."/>
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
