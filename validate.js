@@ -7,14 +7,23 @@ function checkNID() {
 	}
   }
   
+  //function checkWorkDays() {
+	//let num = (document.getElementById("workDays").value).trim();
+	//if (isNaN(num) || num >= 1 && num <= 6){
+	  //return false;
+	//} else {
+	  //return true;
+	//}
+  //}
+
   function checkWorkDays() {
-	let num = (document.getElementById("workDays").value).trim();
-	if (isNaN(num)) {
-	  return false;
-	} else {
-	  return true;
-	}
-  }
+	let num = document.getElementById("workDays").value.trim();
+
+	if (isNaN(num)) return false;
+
+	let days = parseInt(num);
+	return days >= 1 && days <= 6;
+}
   
   function validateForm(){
 	  if(!checkNID()){
