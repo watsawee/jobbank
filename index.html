@@ -82,6 +82,22 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+<script>
+  function validateForm() {
+    const nid = document.getElementById("nid").value.trim();
+    const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
+    const school = document.getElementById("school").value;
+    const year = document.getElementById("year").value;
+    const workDays = document.getElementById("workDays").value.trim();
+    const gender = document.querySelector('input[name="genderRad"]:checked');
+
+    if (!nid || !fname || !lname || !school || !year || !workDays || !gender) {
+    alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
+    return false;
+  }
+  }
+  </script>
 
 </body>
 </html>
