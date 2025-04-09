@@ -38,8 +38,7 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid" required/>
-    </div>
+        <input type="text" class="form-control" id="nid" name="nid" required minlength="13" maxlength="13"  pattern="\d{13}"  oninput="this.value = this.value.replace(/\D/g, '').slice(0, 13)" title="กรุณาใส่ให้ครบ 13 หลัก">    </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
         <input type="text" class="form-control" id="fname" name="fname" required/>
