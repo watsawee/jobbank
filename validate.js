@@ -1,9 +1,9 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
+  if(/^\d{13}$/.test(nid)){
 	return true;
+  }else{
+	return false;
   }
 }
 
