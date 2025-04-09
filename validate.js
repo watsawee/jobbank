@@ -8,14 +8,15 @@ function checkNID() {
   }
   
 
-function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
+  function checkWorkDays() {
+	let num = document.getElementById("workDays").value.trim();
+	let days = Number(num);
+	if (isNaN(days) || days < 1 || days > 6) {
+	  return false;
+	}
 	return true;
   }
-}
+  
 function checkGender() {
 	let genderRadios = document.getElementsByName("genderRad");
 	for (let i = 0; i < genderRadios.length; i++) {
@@ -37,7 +38,7 @@ function validateForm() {
 	const workDays = document.getElementById("workDays").value.trim();
   
 	
-	if (!nid || !fname || !lname || !gender || !school || !year || !workDays) {
+	if (!nid || !fname || !lname || !school || !year || !workDays) {
 	  alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
 	  return false;
 	}
@@ -47,12 +48,18 @@ function validateForm() {
 		document.getElementById("nid").focus();
 		return false;
 	  }
-	  
-	  if (!checkGender()) {
+
+	  if (!checkGender(gender)) {
 		alert("กรุณาเลือกสถานะเพศ");
 		return false;
 	  }
 	
 	
+	  if (!checkWorkDays(workDays)) {
+		alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ระหว่าง 1 ถึง 6 วัน (ตัวเลขเท่านั้น)");
+		document.getElementById("workDays").focus();
+		return false;
+	  }
+	  
   }
   
