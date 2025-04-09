@@ -12,7 +12,16 @@ function checkWorkDays() {
   }
 }
 
+function validateGender() {
+	const genderSelected = document.querySelector('input[name="genderRad"]:checked');
+	return genderSelected !== null;
+ }
+
 function validateForm(){
+	if (!validateGender()) {
+		alert("Please select your gender: Male, Female, or Other.");
+		return false;
+	}
 	if(!checkNID()){
 	  alert("Invalid value for National ID! must be 13 and only number.");
 	  document.getElementById("nid").focus();
