@@ -26,8 +26,8 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="job1.html">นักศึกษาช่วยสอน (Student demonstrator)</a></li>
-              <li><a class="dropdown-item" href="#">Job#2</a></li>
-              <li><a class="dropdown-item" href="#">Job#3</a></li>
+              <li><a class="dropdown-item" href="job2.html">ผู้ช่วยวิจัย (Research Assistant)</a></li>
+              <li><a class="dropdown-item" href="job3.html">พนักงานธุรการ (Office Staff)</a></li>
             </ul>
           </li>
         </ul>
@@ -38,19 +38,19 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
+        <input type="text" class="form-control" id="nid" name="nid" required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+        <input type="text" class="form-control" id="fname" name="fname" required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+        <input type="text" class="form-control" id="lname" name="lname" required/>
     </div>
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender1" name="genderRad" required value="1">&nbsp; Male &nbsp;&nbsp;
 		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
         <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
     </div>
