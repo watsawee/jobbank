@@ -75,9 +75,13 @@
       </select>
     </div>
     <div class="mb-3 mt-3">
-      <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)<span style="color:red">*</span></label>
+      <label for="workDays" class="form-label">
+        How many days a week can you work? (1 to 6 days/week)<span style="color:red">*</span>
+      </label>
       <input type="number" class="form-control" id="workDays" name="workDays" min="1" max="6" required/>
+      <div class="form-text text-muted">Please enter a number between 1 and 6.</div>
     </div>
+    
     
     <button type="submit" class="btn btn-primary">Register</button>
     <button type="reset" class="btn btn-primary">Reset</button>
