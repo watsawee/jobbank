@@ -38,22 +38,24 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/required>
+        <input type="text" class="form-control" id="nid" name="nid"/>
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/required>
+        <input type="text" class="form-control" id="fname" name="fname"/>
     </div>
     <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/required>
+        <input type="text" class="form-control" id="lname" name="lname"/>
     </div>
+	
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
+			<input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
 		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
+			<input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
     </div>
+	
     <div class="mb-3 mt-3">
         <label for="school" class="form-label">School<span style="color:red">*</span></label>
         <select class="form-select" id="school" name="shool">
@@ -75,7 +77,7 @@
     <div class="mb-3 mt-3">
         <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
         <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays"/required>
+        <input type="text" class="form-control" id="workDays" name="workDays"/>
     </div>
 	
     <button type="submit" class="btn btn-primary">Register</button>
