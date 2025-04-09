@@ -5,10 +5,11 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  let days = Number(num);
+  if (!/^\d+$/.test(num) || days < 1 || days > 6) {
     return false;
   } else {
-	return true;
+    return true;
   }
 }
 
