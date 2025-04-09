@@ -36,6 +36,11 @@ function checkRequiredFields() {
 	return num >= 1 && num <= 6;
   }  
 
+  function resetForm() {
+	document.getElementById("registerForm").reset();
+  }
+  
+
 function validateForm(){
 	if (!checkRequiredFields()) {
 		alert("Please fill in all required fields.");
