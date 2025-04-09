@@ -1,15 +1,15 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
+  if(/^\d{13}$/.test(nid)){
 	return true;
+  }else{
+	return false;
   }
 }
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1 || num > 6) {
     return false;
   } else {
 	return true;
