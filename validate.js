@@ -13,10 +13,10 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
+  if (isNumeric(num) && num >=1 && num <= 6 ) {
+    return true;
   } else {
-	return true;
+	return false;
   }
 }
 
