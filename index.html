@@ -38,15 +38,15 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
+        <input type="text" class="form-control" id="nid" name="nid"required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+        <input type="text" class="form-control" id="fname" name="fname"required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+        <input type="text" class="form-control" id="lname" name="lname"required/>
     </div>
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
@@ -75,7 +75,7 @@
     <div class="mb-3 mt-3">
         <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
         <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays"/>
+        <input type="text" class="form-control" id="workDays" name="workDays"required/>
     </div>
 	
     <button type="submit" class="btn btn-primary">Register</button>
