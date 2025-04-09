@@ -1,11 +1,12 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
+	let nid = document.getElementById("nid").value.trim();
+	const nidRegex = /^\d{13}$/;
+	if (!nidRegex.test(nid)) {
+	  return false;
+	}
 	return true;
   }
-}
+  
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
@@ -30,7 +31,12 @@ function validateForm() {
 	  alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
 	  return false;
 	}
-  
+	
+	if (!/^\d{13}$/.test(nid)) {
+		alert("เลขบัตรประชาชนต้องเป็นตัวเลข 13 หลัก");
+		document.getElementById("nid").focus();
+		return false;
+	  }
 	
 	
   }
