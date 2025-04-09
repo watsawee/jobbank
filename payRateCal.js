@@ -4,7 +4,22 @@ function payRateCalculate() {
   let yearOfStudy = parseInt(selectObj.options[selectObj.selectedIndex].value);
   //alert("yearOfStudy = "+yearOfStudy);
   
-  return 0;
+  let payRate;
+
+  if (yearOfStudy === 1) {
+    payRate = 55;
+  } 
+  else if (yearOfStudy === 2) {
+    payRate = 65;
+  } 
+  else if (yearOfStudy === 3) {
+    payRate = 75;
+  } 
+  else { // 4th year or higher
+    payRate = 85;
+  }
+
+  return payRate * workDays;
 }
 
 
