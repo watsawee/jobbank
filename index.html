@@ -65,9 +65,8 @@
       </select>
     </div>
     <div class="mb-3 mt-3">
-      <label for="year" class="form-label">Year of Study<span style="color:red">*</span></label>
+      <label for="year" class="form-label">Year of Study<span style="color:red"></span></label>
       <select class="form-select" id="year" name="year" required>
-        <option value="">-- Select Year --</option>
         <option value="1">1st Year (55 THB/hour)</option>
         <option value="2">2nd Year (65 THB/hour)</option>
         <option value="3">3rd Year (75 THB/hour)</option>
@@ -75,8 +74,9 @@
       </select>
     </div>
     <div class="mb-3 mt-3">
-      <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)<span style="color:red">*</span></label>
-      <input type="number" class="form-control" id="workDays" name="workDays" min="1" max="6" required/>
+      <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
+      <span style="color:red"></span></label>
+      <input type="text" class="form-control" id="workDays" name="workDays" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if (this.value.length > 1) this.value = this.value.slice(0, 1);" />
     </div>
 
     <button type="submit" class="btn btn-primary">Register</button>
