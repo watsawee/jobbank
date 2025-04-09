@@ -1,17 +1,18 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
+  //if(isNaN(nid)){
+  if (nid.length == 13 &&!isNaN(nid) ) {
 	return true;
+  }else{
+	return false;
   }
 }
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1) {
     return false;
-  } else {
+  } else if (isNaN(num) || num < 6){
 	return true;
   }
 }
