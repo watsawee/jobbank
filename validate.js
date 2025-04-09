@@ -1,9 +1,13 @@
+function isNumeric(value) {
+    return /^\d+$/.test(value);
+}
+
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
+  if(nid.length == 13 && isNumeric(nid)){
 	return true;
+  }else{
+	return false;
   }
 }
 
