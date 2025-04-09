@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Job Bank System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .job-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      margin-top: 30px;
+    }
+    .job-image {
+      border-radius: 10px;
+    }
+    .job-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-top: 15px;
+      color: #343a40;
+    }
+    .nav-link, .navbar-brand {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">🎓 Student Job Bank System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Job Opportunities
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="job1.html">นักศึกษาช่วยสอน (Student demonstrator)</a></li>
+              <li><a class="dropdown-item" href="job2.html">นักกีฬามวยสากลสมัครเล่น (Amateur Boxer)</a></li>
+              <li><a class="dropdown-item" href="#">Job#3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="job-card row">
+    <div class="col-md-5">
+      <img src="images/book box.jpg" alt="Boxing Job" class="img-fluid job-image">
+    </div>
+    <div class="col-md-7">
+      <div class="job-title">📣 เปิดรับสมัครนักกีฬามวยสากลสมัครเล่น</div>
+      <p class="text-muted">เพื่อเข้าร่วมทีมตัวแทนมหาวิทยาลัย</p>
+
+      <div class="section-title">คุณสมบัติ:</div>
+      <ul>
+        <li>นักศึกษาระดับปริญญาตรี ทุกคณะ ทุกชั้นปี</li>
+        <li>มีพื้นฐานด้านกีฬามวย หรือเคยแข่งขันจะพิจารณาเป็นพิเศษ</li>
+        <li>สามารถฝึกซ้อมตามตาราง และมีวินัย</li>
+        <li>สุขภาพแข็งแรง ไม่มีโรคต้องห้ามทางกีฬา</li>
+      </ul>
+
+      <div class="section-title">ช่วงเวลาฝึกซ้อม:</div>
+      <p>📅 อังคาร พฤหัสบดี และเสาร์<br>
+         🕔 เวลา 17.00 - 20.00 น.<br>
+         🏟️ ณ โรงยิมกีฬา มหาวิทยาลัย</p>
+
+      <div class="section-title">สวัสดิการ:</div>
+      <ul>
+        <li>ชุดกีฬาและอุปกรณ์ฝึกซ้อม</li>
+        <li>เบี้ยเลี้ยงสำหรับการเดินทางแข่งขัน</li>
+        <li>โอกาสเข้าแข่งขันระดับภาค/ประเทศ</li>
+      </ul>
+
+      <div class="section-title">วันที่เปิดรับสมัคร:</div>
+      <p>📅 1 - 15 พฤษภาคม 2568</p>
+
+      <div class="section-title">ช่องทางการสมัคร:</div>
+      <p>📌 สมัครด้วยตนเองที่ ห้องฝ่ายกีฬา อาคารกิจกรรมนักศึกษา ชั้น 2<br>
+         📧 หรือส่งอีเมลที่: <a href="mailto:boxing_team@utcc.ac.th">boxing_team@utcc.ac.th</a></p>
+
+      <a href="#" class="btn btn-primary mt-3">📨 สมัครเข้าร่วม</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
