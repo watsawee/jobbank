@@ -33,3 +33,23 @@ function validateForm(){
 		}
 	}
 }
+function validateForm() {
+    const nidInput = document.getElementById("nid");
+    const nidValue = nidInput.value.trim();
+    const nidError = document.getElementById("nidError");
+    nidError.textContent = ""; // เคลียร์ข้อความผิดพลาด
+
+    if (nidValue.length !== 13) {
+      nidError.textContent = "กรุณากรอกหมายเลขบัตรประชาชน 13 หลัก";
+      nidInput.focus();
+      return false;
+    }
+
+    if (!/^\d+$/.test(nidValue)) {
+      nidError.textContent = "กรุณากรอกหมายเลขบัตรประชาชนด้วยตัวเลขเท่านั้น";
+      nidInput.focus();
+      return false;
+    }
+
+    return true;
+  }
