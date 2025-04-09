@@ -71,10 +71,10 @@
         <option value="4">4th Year or Greater (85 THB/hour)</option>
       </select>
     </div>
-    <div class="mb-3 mt-3">
+    <div class="mb-3 mt-3"> 
         <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
         <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays" required/>
+        <input type="text" class="form-control" id="workDays" name="workDays" required pattern="[1-6]" maxlength="1" title="กรุณาใส่ตัวเลข1-6"/>
     </div>
 	
     <button type="submit" class="btn btn-primary">Register</button>
