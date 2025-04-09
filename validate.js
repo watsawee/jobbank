@@ -1,6 +1,7 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
+  const nidPattern = /^[0-9]{13}$/;
+  if(!nidPattern.test(nid)){
 	return false;
   }else{
 	return true;
@@ -9,7 +10,8 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  const numPattern = /^[1-6]{1}$/;
+  if (!numPattern.test(num)) {
     return false;
   } else {
 	return true;
