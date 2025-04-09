@@ -13,12 +13,14 @@ function checkNID() {
   
   function checkWorkDays() {
 	let num = (document.getElementById("workDays").value).trim();
-	if (num === "" || isNaN(num)) {
+	
+	if (num === "" || isNaN(num) || num < 1 || num > 6) {
 	  return false;
 	} else {
 	  return true;
 	}
   }
+  
   
   function checkNameFields() {
 	let fname = (document.getElementById("fname").value).trim();
