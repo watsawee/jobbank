@@ -24,7 +24,7 @@ function payRateCalculate() {
   }
 
  
-  let weeklyPayRate = hourlyRate * workDays * 3 ; 
+  let weeklyPayRate = hourlyRate * workDays * 8 + " In case work 8 hour/day"; 
   
   return weeklyPayRate;
 }
