@@ -1,20 +1,20 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
+	let nid = (document.getElementById("nid").value).trim();
+	if (isNaN(nid) || nid.length !== 13) {
+	  return false;  // ต้องเป็นตัวเลข 13 หลัก
+	} else {
+	  return true;
+	}
   }
-}
 
-function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  function checkWorkDays() {
+	let num = (document.getElementById("workDays").value).trim();
+	if (isNaN(num) || num < 1 || num > 6) {
+	  return false;  // ต้องเป็นตัวเลขที่ระหว่าง 1 ถึง 6
+	} else {
+	  return true;
+	}
   }
-}
 
 function validateForm(){
 	if(!checkNID()){
