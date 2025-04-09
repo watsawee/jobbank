@@ -1,3 +1,15 @@
+function checkRequiredFields() {
+	const fields = ["nid", "fname", "lname", "school", "year", "workDays"];
+	for (let id of fields) {
+	  const el = document.getElementById(id);
+	  if (!el.value.trim()) {
+		el.focus();
+		return false;
+	  }
+	}
+	return true;
+  }
+
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
   if(isNaN(nid)){
@@ -17,6 +29,11 @@ function checkWorkDays() {
 }
 
 function validateForm(){
+	if (!checkRequiredFields()) {
+		alert("Please fill in all required fields.");
+		return false;
+	  }
+	  
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
