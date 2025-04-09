@@ -26,7 +26,7 @@ function validateForm(){
 	  return false;
 	} else {
 	  if(!checkWorkDays()){
-		alert("Invalid value for days of work!");
+		alert("Invalid value for days of work!!please enter 1-6 only");
 		document.getElementById("workDays").focus();
 		return false;
 	  } else {
