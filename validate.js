@@ -1,6 +1,7 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
+  const nidPattern = /^[0-9]{13}$/;
+  if(!nidPattern.test(nid)){
 	return false;
   }else{
 	return true;
