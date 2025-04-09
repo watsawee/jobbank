@@ -1,10 +1,10 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
-  }
+	let nid = (document.getElementById("nid").value).trim();
+	if (nid === "" || isNaN(nid) || nid.length !== 13) {
+		return false;
+	} else {
+		return true;
+	}
 }
 
 function checkWorkDays() {
@@ -18,7 +18,7 @@ function checkWorkDays() {
 
 function validateForm(){
 	if(!checkNID()){
-	  alert("Invalid value for National ID!");
+	  alert("Invalid value for National ID! It must be a 13-digit number.");
 	  document.getElementById("nid").focus();
 	  return false;
 	}else{
