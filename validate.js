@@ -18,11 +18,13 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] < '1' || num[i] > '6') {
+      return false;
+    }
   }
+
+  return true;
 }
 
 function validateForm(){
@@ -31,7 +33,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
+		  alert("Only 1 - 6 Days");
 		  document.getElementById("workDays").focus();
 		  return false;
 		}else{
