@@ -28,7 +28,7 @@ function checkGender() {
   }
   
 
-function validateForm() {
+  function validateForm() {
 	const nid = document.getElementById("nid").value.trim();
 	const fname = document.getElementById("fname").value.trim();
 	const lname = document.getElementById("lname").value.trim();
@@ -42,24 +42,36 @@ function validateForm() {
 	  alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
 	  return false;
 	}
-
-	if (!/^\d{13}$/.test(nid)) {
-		alert("เลขบัตรประชาชนต้องเป็นตัวเลข 13 หลัก");
-		document.getElementById("nid").focus();
-		return false;
-	  }
-
-	  if (!checkGender(gender)) {
-		alert("กรุณาเลือกสถานะเพศ");
-		return false;
-	  }
+  
 	
+	if (!checkNID()) {
+	  alert("เลขบัตรประชาชนต้องเป็นตัวเลข 13 หลัก");
+	  document.getElementById("nid").focus();
+	  return false;
+	}
+  
 	
-	  if (!checkWorkDays(workDays)) {
-		alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ระหว่าง 1 ถึง 6 วัน (ตัวเลขเท่านั้น)");
-		document.getElementById("workDays").focus();
-		return false;
-	  }
-	  
+	if (!checkGender()) {
+	  alert("กรุณาเลือกสถานะเพศ");
+	  return false;
+	}
+  
+	
+	if (!checkWorkDays()) {
+	  alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ระหว่าง 1 ถึง 6 วัน (ตัวเลขเท่านั้น)");
+	  document.getElementById("workDays").focus();
+	  return false;
+	}
+  
+	
+	let totalPay = payRateCalculate(); 
+  
+	
+	if (totalPay !== null) {
+	  alert("Total Pay: " + totalPay + " THB");
+	}
+  
+
+	return true;
   }
   
