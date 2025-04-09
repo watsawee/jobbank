@@ -1,29 +1,39 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
+  if (nid.length !== 13) {
+    alert("National ID card number must contain 13 digits.");
+    return false;
   }
+
+  for (let i = 0; i < nid.length; i++) {
+    if (nid[i] < '0' || nid[i] > '9') {
+      alert("Only numbers must be entered.");
+      return false;
+    }
+  }
+
+  return true;
 }
+
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] < '1' || num[i] > '6') {
+      return false;
+    }
   }
+
+  return true;
 }
 
 function validateForm(){
 	if(!checkNID()){
-	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
 	  return false;
 	}else{
 		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
+		  alert("Only 1 - 6 Days");
 		  document.getElementById("workDays").focus();
 		  return false;
 		}else{
