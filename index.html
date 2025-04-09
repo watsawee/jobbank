@@ -37,8 +37,9 @@
   
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
-        <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"required/>
+      <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
+      <input type="text" class="form-control" id="nid" name="nid" maxlength="13" required oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+      <div id="nidError" class="form-text text-danger"></div>
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
