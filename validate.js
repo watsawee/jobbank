@@ -5,11 +5,12 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  let day = parseInt(num);
+  // ตรวจสอบว่าเป็นตัวเลข และอยู่ในช่วง 1-6
+  if (isNaN(day) || day < 1 || day > 6) {
     return false;
-  } else {
-	return true;
   }
+  return true;
 }
 
 function validateGender() {
@@ -27,10 +28,10 @@ function validateForm(){
 	  document.getElementById("nid").focus();
 	  return false;
 	}else{
-		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
-		  document.getElementById("workDays").focus();
-		  return false;
+		if (!checkWorkDays()) {
+			alert("Invalid value for days of work! Please enter a number between 1 and 6.");
+			document.getElementById("workDays").focus();
+			return false;
 		}else{
 			total = payRateCalculate();
 			alert("Your weekly pay rate is "+total+" THB");
