@@ -10,6 +10,14 @@ function checkRequiredFields() {
 	return true;
   }
 
+  function checkGender() {
+	const genders = document.getElementsByName("genderRad");
+	for (let g of genders) {
+	  if (g.checked) return true;
+	}
+	return false;
+  }
+
   function checkNID() {
 	let nid = (document.getElementById("nid").value).trim();
 	return !isNaN(nid) && nid.length === 13;
@@ -30,6 +38,12 @@ function validateForm(){
 		alert("Please fill in all required fields.");
 		return false;
 	  }
+
+	  if (!checkGender()) {
+		alert("Please select your gender.");
+		return false;
+	  }
+	  
 	  
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
