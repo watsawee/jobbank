@@ -49,11 +49,11 @@
         <input type="text" class="form-control" id="lname" name="lname"/>
     </div>
     <div class="mb-3 mt-3">
-      <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-      <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="Male" required>&nbsp; Male &nbsp;&nbsp;
-      <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="Female" required>&nbsp; Female &nbsp;&nbsp;
-      <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="Other" required>&nbsp; Other
-  </div>
+        <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
+		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
+    </div>
     <div class="mb-3 mt-3">
         <label for="school" class="form-label">School<span style="color:red">*</span></label>
         <select class="form-select" id="school" name="shool">
@@ -73,10 +73,10 @@
       </select>
     </div>
     <div class="mb-3 mt-3">
-        <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
-        <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays"/>
-    </div>
+      <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
+      <span style="color:red">*</span></label>
+      <input type="number" class="form-control" id="workDays" name="workDays" max="6" min="1" required/>
+  </div>
 	
     <button type="submit" class="btn btn-primary">Register</button>
     <button type="reset" class="btn btn-primary">Reset</button>
