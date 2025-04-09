@@ -97,13 +97,13 @@
     return false;
   }
   // ตรวจสอบเลขบัตรประชาชน
-  if (nid.length !== 13 || isNaN(nid)) {
-    alert("หมายเลขบัตรประชาชนต้องเป็นตัวเลข 13 หลัก");
+  if (!/^\d{13}$/.test(nid)) {
+    alert("กรุณากรอกหมายเลขบัตรประชาชนให้ถูกต้อง (13 หลัก ตัวเลขเท่านั้น)");
     return false;
   }
-  // ตรวจสอบเพศ
-  if (!gender) {
-    alert("กรุณาเลือกเพศ");
+  const days = parseInt(workDays);
+  if (isNaN(days) || days < 1 || days > 6) {
+    alert("กรุณาระบุจำนวนวันที่สามารถทำงานได้ ระหว่าง 1 ถึง 6 วัน");
     return false;
   }
   }
