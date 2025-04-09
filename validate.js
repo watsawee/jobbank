@@ -1,11 +1,15 @@
 function checkNID() {
 	let nid = (document.getElementById("nid").value).trim();
-	if (nid === "" || isNaN(nid)) {
+	
+	let regex = /^[0-9]{13}$/; 
+	
+	if (nid === "" || !regex.test(nid)) {
 	  return false;
 	} else {
 	  return true;
 	}
   }
+  
   
   function checkWorkDays() {
 	let num = (document.getElementById("workDays").value).trim();
