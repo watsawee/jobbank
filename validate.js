@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
+  if (nid.length !==13 && nid > 0){
 	return false;
   }else{
 	return true;
@@ -29,7 +29,7 @@ function validateForm(){
 		}else{
 			total = payRateCalculate();
 			alert("Your weekly pay rate is "+total+" THB");
-			return false;
+			return true;
 		}
 	}
 }
