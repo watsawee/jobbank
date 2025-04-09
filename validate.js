@@ -1,11 +1,11 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
+	if (document.getElementById("nid").value.trim().length === 13 && !isNaN(document.getElementById("nid").value.trim())) {
+	  return true;
+	} else {
+	  return false;
+	}
   }
-}
+  
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
