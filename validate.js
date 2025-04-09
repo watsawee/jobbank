@@ -24,7 +24,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkWorkDays()){
-		  alert("Invalid value for days of work! เระ between 1 and 6");
+		  alert("Invalid value for days of work! between 1 and 6");
 		  document.getElementById("workDays").focus();
 		  return false;
 		}else{
