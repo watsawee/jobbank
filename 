@@ -1,0 +1,17 @@
+[33mcommit 73c52a58d08f9002ebc14385e7282618f517a209[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfix-registration-validation[m[33m)[m
+Author: unknown <plammapro@gmail.com>
+Date:   Wed Apr 9 11:15:38 2025 +0700
+
+    Add logic: calculate and display weekly pay rate in popup
+
+[33mcommit 49d1260ea820843065428fb60919708880a20c67[m
+Author: unknown <plammapro@gmail.com>
+Date:   Wed Apr 9 11:11:00 2025 +0700
+
+    Add validation: National ID must be 13 digits number
+
+[33mcommit 7cbedca84e85b1dd342dca9ee18ed3ce6a56b874[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Watsawee <watsawee@gmail.com>
+Date:   Tue Apr 8 19:09:57 2025 +0700
+
+    initial commit - add all files
