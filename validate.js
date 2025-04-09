@@ -53,3 +53,52 @@ function validateForm() {
 
     return true;
   }
+  function validateForm() {
+    const workDaysInput = document.getElementById("workDays");
+    const workDaysValue = workDaysInput.value.trim();
+
+    // ตรวจสอบว่าเป็นตัวเลขหรือไม่
+    if (!/^\d+$/.test(workDaysValue)) {
+      alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ด้วยตัวเลขเท่านั้น");
+      workDaysInput.focus();
+      return false;
+    }
+
+    const days = parseInt(workDaysValue);
+
+    // ตรวจสอบช่วงของตัวเลข
+    if (isNaN(days)  days < 1  days > 6) {
+      alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ตั้งแต่ 1 ถึง 6 วัน");
+      workDaysInput.focus();
+      return false;
+    }
+
+    // ถ้าผ่านการตรวจสอบอื่นๆ ก็สามารถส่งแบบฟอร์มต่อได้
+    return true;
+  }
+
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // ป้องกันการส่งแบบฟอร์มแบบดั้งเดิม
+
+    // ตรวจสอบความถูกต้องของข้อมูลด้วย validateForm() (ตามที่คุณมีอยู่)
+    if (validateForm()) {
+        // ถ้าข้อมูลถูกต้อง ให้ส่งไปยัง Servlet เพื่อคำนวณค่าตอบแทน
+        fetch('/calculatePay', {
+            method: 'POST',
+            body: new FormData(this), // ส่งข้อมูลแบบฟอร์ม
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error); // แสดงข้อผิดพลาดจากเซิร์ฟเวอร์
+            } else if (data.weeklyPay) {
+                alert(อัตราค่าตอบแทนต่อสัปดาห์โดยประมาณ: ${data.weeklyPay} บาท);
+                // คุณอาจต้องการทำการ Redirect หรือดำเนินการอื่นๆ ต่อไป
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('เกิดข้อผิดพลาดในการสื่อสารกับเซิร์ฟเวอร์');
+        });
+    }
+});
