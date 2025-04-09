@@ -1,18 +1,22 @@
+function isNumeric(value) {
+    return /^\d+$/.test(value);
+}
+
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
+  if(nid.length == 13 && isNumeric(nid)){
 	return true;
+  }else{
+	return false;
   }
 }
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
+  if (isNumeric(num) && num >=1 && num <= 6 ) {
+    return true;
   } else {
-	return true;
+	return false;
   }
 }
 
