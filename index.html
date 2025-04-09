@@ -49,11 +49,24 @@
       <input type="text" class="form-control" id="lname" name="lname" required/>
     </div>
     <div class="mb-3 mt-3">
-      <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-      <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1" required> Male &nbsp;&nbsp;
-      <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2"> Female &nbsp;&nbsp;
-      <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3"> Other
+      <label class="form-label d-block">Gender<span class="text-danger">*</span></label>
+    
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1" required>
+        <label class="form-check-label" for="gender1">Male</label>
+      </div>
+    
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2" required>
+        <label class="form-check-label" for="gender2">Female</label>
+      </div>
+    
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3" required>
+        <label class="form-check-label" for="gender3">Other</label>
+      </div>
     </div>
+
     
     <div class="mb-3 mt-3">
       <label for="school" class="form-label">School<span style="color:red">*</span></label>
