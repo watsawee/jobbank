@@ -37,35 +37,38 @@
   
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
-        <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
+      <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
+      <input type="text" class="form-control" id="nid" name="nid" required/>
     </div>
     <div class="mb-3 mt-3">
-        <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+      <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
+      <input type="text" class="form-control" id="fname" name="fname" required/>
     </div>
     <div class="mb-3 mt-3">
-        <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+      <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
+      <input type="text" class="form-control" id="lname" name="lname" required/>
     </div>
     <div class="mb-3 mt-3">
-        <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
-		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
+      <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
+      <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1" required> Male &nbsp;&nbsp;
+      <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2"> Female &nbsp;&nbsp;
+      <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3"> Other
     </div>
+    
     <div class="mb-3 mt-3">
-        <label for="school" class="form-label">School<span style="color:red">*</span></label>
-        <select class="form-select" id="school" name="shool">
-          <option value="1">School of Science and Technology</option>
-          <option value="2">School of Business Administration</option>
-          <option value="3">School of Law</option>
-          <option value="4">School of Art and Design</option>
-        </select>
+      <label for="school" class="form-label">School<span style="color:red">*</span></label>
+      <select class="form-select" id="school" name="school" required>
+        <option value="">-- Select School --</option>
+        <option value="1">School of Science and Technology</option>
+        <option value="2">School of Business Administration</option>
+        <option value="3">School of Law</option>
+        <option value="4">School of Art and Design</option>
+      </select>
     </div>
     <div class="mb-3 mt-3">
       <label for="year" class="form-label">Year of Study<span style="color:red">*</span></label>
-      <select class="form-select" id="year" name="year">
+      <select class="form-select" id="year" name="year" required>
+        <option value="">-- Select Year --</option>
         <option value="1">1st Year (55 THB/hour)</option>
         <option value="2">2nd Year (65 THB/hour)</option>
         <option value="3">3rd Year (75 THB/hour)</option>
@@ -73,14 +76,13 @@
       </select>
     </div>
     <div class="mb-3 mt-3">
-        <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
-        <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays"/>
+      <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)<span style="color:red">*</span></label>
+      <input type="number" class="form-control" id="workDays" name="workDays" min="1" max="6" required/>
     </div>
-	
+
     <button type="submit" class="btn btn-primary">Register</button>
     <button type="reset" class="btn btn-primary">Reset</button>
-</form><br><br>
+  </form><br><br>
 </div>
 
 </body>
