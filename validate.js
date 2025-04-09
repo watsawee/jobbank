@@ -1,3 +1,11 @@
+function validateForm() {
+	let nid = document.getElementById("nid").value.trim();
+	if (!nid) {
+	  alert("Please fill in the information correctly.");
+	  return false;
+	}
+}
+
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
   if(isNaN(nid)){
