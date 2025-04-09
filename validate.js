@@ -16,20 +16,22 @@ function checkWorkDays() {
   }
 }
 
-function validateForm(){
-	if(!checkNID()){
-	  alert("Invalid value for National ID!");
-	  document.getElementById("nid").focus();
+function validateForm() {
+	const nid = document.getElementById("nid").value.trim();
+	const fname = document.getElementById("fname").value.trim();
+	const lname = document.getElementById("lname").value.trim();
+	const gender = document.querySelector('input[name="genderRad"]:checked');
+	const school = document.getElementById("school").value;
+	const year = document.getElementById("year").value;
+	const workDays = document.getElementById("workDays").value.trim();
+  
+	
+	if (!nid || !fname || !lname || !gender || !school || !year || !workDays) {
+	  alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
 	  return false;
-	}else{
-		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
-		  document.getElementById("workDays").focus();
-		  return false;
-		}else{
-			total = payRateCalculate();
-			alert("Your weekly pay rate is "+total+" THB");
-			return false;
-		}
 	}
-}
+  
+	
+	
+  }
+  
