@@ -19,7 +19,6 @@ function checkWorkDays() {
 function validateForm(){
 	
 	let userInput = document.getElementById('nid').value.length;
-	console.log(userInput);
 	
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
@@ -34,11 +33,15 @@ function validateForm(){
 	//######################################################
 	
 	else{
+		let inputWork = document.getElementById('workDays').value;
+		
 		if(!checkWorkDays()){
 		  alert("Invalid value for days of work!");
 		  document.getElementById("workDays").focus();
 		  return false;
-		}else{
+		}
+	
+		else{
 			total = payRateCalculate();
 			alert("Your weekly pay rate is "+total+" THB");
 			return false;
