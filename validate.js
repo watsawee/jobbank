@@ -16,13 +16,10 @@ function checkNID() {
 }
 
 function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+	const num = document.getElementById("workDays").value.trim();
+	const val = parseInt(num);
+	return !isNaN(val) && val >= 1 && val <= 6; 
   }
-}
 
 function validateForm(){
 	if(!checkNID()){
