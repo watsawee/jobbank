@@ -24,14 +24,17 @@ function checkRequiredFields() {
   }
   
 
-function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
-  }
-}
+  function checkWorkDays() {
+	let value = document.getElementById("workDays").value.trim();
+  
+	// ตรวจสอบว่าเป็นตัวเลขล้วน และอยู่ในช่วง 1-6
+	if (!/^\d+$/.test(value)) {
+	  return false;
+	}
+  
+	let num = parseInt(value);
+	return num >= 1 && num <= 6;
+  }  
 
 function validateForm(){
 	if (!checkRequiredFields()) {
