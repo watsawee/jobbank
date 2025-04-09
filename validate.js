@@ -21,7 +21,7 @@ function checkGender() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1 || num > 6) {
     return false;
   } else {
 	return true;
@@ -29,22 +29,21 @@ function checkWorkDays() {
 }
 
 function validateForm(){
-	if(!checkNID()){
+	if (!checkNID()) {
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
 	  return false;
-	}else if (!checkGender()) {
-		alert("Please select your gender.");
-		return false;
-	  }else{
-		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
-		  document.getElementById("workDays").focus();
-		  return false;
-		}else{
-			total = payRateCalculate();
-			alert("Your weekly pay rate is "+total+" THB");
-			return false;
-		}
+	} else if (!checkGender()) {
+	  alert("Please select your gender.");
+	  return false;
+	} else if (!checkWorkDays()) {
+	  alert("Invalid value for days of work!");
+	  document.getElementById("workDays").focus();
+	  return false;
+	} else {
+	  total = payRateCalculate();
+	  alert("Your weekly pay rate is " + total + " THB");
+	  return false;
 	}
-}
+  }
+  
