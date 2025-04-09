@@ -10,7 +10,8 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
+  const numPattern = /^[1-6]{1}$/;
+  if (!numPattern.test(num)) {
     return false;
   } else {
 	return true;
