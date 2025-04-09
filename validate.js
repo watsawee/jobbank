@@ -20,7 +20,12 @@ function validateForm(){
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
-	  return false;
+	  const nidRegex = /^\d{13}$/;
+	  if (!nidRegex.test(nid)){
+		alert("กรุณากรอกหมายเลขบัตรประชาชนให้ถูกต้อง (13 หลัก และเป็นตัวเลขเท่านั้น)");
+		return false; 
+	  }
+	  return true;
 	}else{
 		if(!checkWorkDays()){
 		  alert("Invalid value for days of work!");
