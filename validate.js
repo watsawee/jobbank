@@ -16,6 +16,16 @@ function checkWorkDays() {
 	return true;
   }
 }
+function checkGender() {
+	let genderRadios = document.getElementsByName("genderRad");
+	for (let i = 0; i < genderRadios.length; i++) {
+	  if (genderRadios[i].checked) {
+		return true;
+	  }
+	}
+	return false;
+  }
+  
 
 function validateForm() {
 	const nid = document.getElementById("nid").value.trim();
@@ -31,10 +41,15 @@ function validateForm() {
 	  alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
 	  return false;
 	}
-	
+
 	if (!/^\d{13}$/.test(nid)) {
 		alert("เลขบัตรประชาชนต้องเป็นตัวเลข 13 หลัก");
 		document.getElementById("nid").focus();
+		return false;
+	  }
+	  
+	  if (!checkGender()) {
+		alert("กรุณาเลือกสถานะเพศ");
 		return false;
 	  }
 	
