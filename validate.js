@@ -7,6 +7,18 @@ function checkNID() {
   }
 }
 
+function checkGender() {
+	const gender1 = document.getElementById("gender1").checked;
+	const gender2 = document.getElementById("gender2").checked;
+	const gender3 = document.getElementById("gender3").checked;
+  
+	if (gender1 || gender2 || gender3) {
+	  return true;
+	} else {
+	  return false;
+	}
+  }
+
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
   if (isNaN(num)) {
@@ -21,7 +33,10 @@ function validateForm(){
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
 	  return false;
-	}else{
+	}else if (!checkGender()) {
+		alert("Please select your gender.");
+		return false;
+	  }else{
 		if(!checkWorkDays()){
 		  alert("Invalid value for days of work!");
 		  document.getElementById("workDays").focus();
