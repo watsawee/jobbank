@@ -77,4 +77,70 @@ function validateForm() {
 	// ถ้าผ่านการตรวจสอบอื่นๆ ก็สามารถส่งแบบฟอร์มต่อได้
 	return true;
   }
+  function calculateWeeklyPay() {
+	const yearSelect = document.getElementById("year");
+	const selectedYearValue = yearSelect.value;
+	const workDaysInput = document.getElementById("workDays");
+	const workDaysValue = workDaysInput.value.trim();
+  
+	let hourlyRate;
+  
+	switch (selectedYearValue) {
+	  case "1":
+		hourlyRate = 55;
+		break;
+	  case "2":
+		hourlyRate = 65;
+		break;
+	  case "3":
+		hourlyRate = 75;
+		break;
+	  case "4":
+		hourlyRate = 85;
+		break;
+	  default:
+		alert("เกิดข้อผิดพลาดในการดึงอัตราค่าจ้าง");
+		return;
+	}
+  
+	const daysPerWeek = parseInt(workDaysValue);
+  
+	if (isNaN(daysPerWeek) || daysPerWeek < 1 || daysPerWeek > 6) {
+	  alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ตั้งแต่ 1 ถึง 6 วัน");
+	  workDaysInput.focus();
+	  return;
+	}
+  
+	// สมมติว่าทำงานวันละ 8 ชั่วโมง (คุณสามารถปรับเปลี่ยนได้ตามความเหมาะสม)
+	const hoursPerDay = 8;
+	const weeklyPay = hourlyRate * hoursPerDay * daysPerWeek;
+  
+	alert(`อัตราค่าตอบแทนต่อสัปดาห์โดยประมาณ: ${weeklyPay} บาท`);
+  }
+  
+  function validateForm() {
+	// ... โค้ดตรวจสอบความถูกต้องของข้อมูลอื่นๆ ที่คุณมีอยู่ ...
+  
+	const workDaysInput = document.getElementById("workDays");
+	const workDaysValue = workDaysInput.value.trim();
+  
+	if (!/^\d+$/.test(workDaysValue)) {
+	  alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ด้วยตัวเลขเท่านั้น");
+	  workDaysInput.focus();
+	  return false;
+	}
+  
+	const days = parseInt(workDaysValue);
+  
+	if (isNaN(days) || days < 1 || days > 6) {
+	  alert("กรุณากรอกจำนวนวันที่สามารถทำงานได้ตั้งแต่ 1 ถึง 6 วัน");
+	  workDaysInput.focus();
+	  return false;
+	}
+  
+	// ถ้าผ่านการตรวจสอบทั้งหมด ให้เรียกฟังก์ชันคำนวณค่าตอบแทน
+	calculateWeeklyPay();
+  
+	return true; // อนุญาตให้ส่งแบบฟอร์ม (หากต้องการ)
+  }
 
