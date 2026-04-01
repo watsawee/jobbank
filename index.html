@@ -82,5 +82,33 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+
+<!-- Promotional Modal -->
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="promoModalLabel">📢 ข่าวประชาสัมพันธ์ (Announcements)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>ยินดีต้อนรับสู่ Student Job Bank System!</h5>
+        <p>ขณะนี้ระบบเปิดรับสมัครนักศึกษาทำงานพิเศษหลายอัตรา สามารถตรวจสอบตำแหน่งงานว่างได้ที่เมนู <strong>Job Opportunities</strong> ด้านบน</p>
+        <p class="text-danger"><em>* สมัครด่วน ตำแหน่งมีจำนวนจำกัด! *</em></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">รับทราบ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var promoModal = new bootstrap.Modal(document.getElementById('promoModal'));
+    promoModal.show();
+  });
+</script>
+
 </body>
 </html>
