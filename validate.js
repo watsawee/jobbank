@@ -15,6 +15,11 @@ function validateForm() {
     document.getElementById("nid").focus();
     return false;
   }
+    if (!/^\d{13}$/.test(nid)) {
+    alert("National ID must be exactly 13 digits and numbers only!");
+    document.getElementById("nid").focus();
+    return false;
+  }
 
   if (fname === "") {
     alert("Please fill in First Name!");
