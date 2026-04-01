@@ -65,6 +65,7 @@ function validateForm() {
     document.getElementById("workDays").focus();
     return false;
   }
-
+    let total = payRateCalculate();
+  alert("Your weekly pay rate is " + total + " THB");
   return false;
 }
