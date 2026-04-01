@@ -82,5 +82,29 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+
+<!-- Promotional Modal -->
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold" id="promoModalLabel">งานสัมมนาน่าสนใจ ลงทะเบียนด่วน!!!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center p-0 pb-4">
+        <!-- สมมติว่าไฟล์ภาพโปสเตอร์ของคุณชื่อ promote_job1.png นะครับ (หรือเปลี่ยนชื่อไฟล์ตามที่มี) -->
+        <img src="images/promote_job1.png" alt="Data Analytics for MarTech" class="img-fluid" style="max-width: 90%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var promoModal = new bootstrap.Modal(document.getElementById('promoModal'));
+    promoModal.show();
+  });
+</script>
+
 </body>
 </html>
