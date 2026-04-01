@@ -82,5 +82,36 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="promoModalLabel">งานสัมมนาน่าสนใจ ลงทะเบียนด่วน!!!</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <h4 class="text-primary mt-2">Data Analytics in E-Sports & Gaming</h4>
+        <p>เจาะลึกสถิติ การวางแผน และกลยุทธ์การบริหารทรัพยากร</p>
+        <div class="alert alert-info text-start" role="alert" style="font-size: 0.9em;">
+          <strong>Highlight ภายในงาน:</strong><br>
+          วิเคราะห์รูปแบบการเล่นและค่าสถานะ (Data Normalization & Stats)<br>
+          พร้อม Case Study การคุมทัพของ <b>Miao Ying, the Storm Dragon</b> จาก The Northern Provinces <br>
+          และยุทธวิธีการรบของ <b>Repanse de Lyonesse</b>
+        </div>
+        <p class="mb-0 text-muted">วันที่: 25 พฤษภาคม 2568 | รับจำนวนจำกัด!</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    var myModal = new bootstrap.Modal(document.getElementById('promoModal'));
+    myModal.show();
+  };
+</script>
 </body>
 </html>
