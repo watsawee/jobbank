@@ -82,5 +82,29 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title" id="announcementModalLabel">📢 ประกาศจากระบบ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ยินดีต้อนรับนักศึกษาทุกคนเข้าสู่ระบบ Student Job Bank System! <br><br>
+        📌 ขณะนี้มีตำแหน่งงานพาร์ทไทม์เปิดรับสมัครใหม่หลายตำแหน่ง (เช่น นักศึกษาช่วยสอน, ผู้ช่วยนักพัฒนาเว็บไซต์) อย่าลืมกรอกข้อมูลให้ครบถ้วนเพื่อผลประโยชน์ของตัวท่านเองนะครับ
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">รับทราบ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    var myModal = new bootstrap.Modal(document.getElementById('announcementModal'), {});
+    myModal.show();
+  }
+</script>
 </body>
 </html>
