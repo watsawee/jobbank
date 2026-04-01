@@ -55,6 +55,16 @@ function validateForm() {
     document.getElementById("workDays").focus();
     return false;
   }
+    if (workDays === "") {
+    alert("Please fill in How many days a week can you work?!");
+    document.getElementById("workDays").focus();
+    return false;
+  }
+  if (!/^\d+$/.test(workDays) || parseInt(workDays) < 1 || parseInt(workDays) > 6) {
+    alert("Work days must be between 1 and 6!");
+    document.getElementById("workDays").focus();
+    return false;
+  }
 
   return false;
 }
