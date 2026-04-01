@@ -82,5 +82,24 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+<script>
+  window.onload = function() {
+    var myModal = new bootstrap.Modal(document.getElementById('promoModal'));
+    myModal.show();
+  };
+</script>
+<div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">ข่าวประชาสัมพันธ์</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>ยินดีต้อนรับสู่ระบบ Student Job Bank! มีตำแหน่งเปิดรับสมัครมากมาย เช่น KoL, นักศึกษาช่วยสอน และ ช่างไฟที่ไม่กลัวไฟดูด</p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
