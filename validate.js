@@ -8,11 +8,11 @@ function checkNID() {
 
 function checkWorkDays() {
   let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
-  }
+  if (num === "") return false;
+  if (isNaN(num)) return false;
+  let days = parseInt(num);
+  if (days < 1 || days > 6) return false;
+  return true;
 }
 
 function validateForm(){
