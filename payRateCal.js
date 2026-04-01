@@ -1,8 +1,7 @@
 function payRateCalculate() {
-  let workDays = (document.getElementById("workDays").value).trim();
+  let workDays = parseInt(document.getElementById("workDays").value.trim());
   let selectObj = document.getElementById("year");
   let yearOfStudy = parseInt(selectObj.options[selectObj.selectedIndex].value);
-  //alert("yearOfStudy = "+yearOfStudy);
   let hourlyRate = 0;
   if (yearOfStudy === 1) {
     hourlyRate = 55;
