@@ -82,5 +82,25 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="announcementModalLabel">งานสัมมนาน่าสนใจ ลงทะเบียนด่วน!!!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="images/promote_job1.png" alt="Announcement" style="width:100%; max-width:350px; height:auto;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function () {
+    let popup = new bootstrap.Modal(document.getElementById('announcementModal'));
+    popup.show();
+  };
+</script>
 </body>
 </html>
