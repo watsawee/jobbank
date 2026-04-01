@@ -1,35 +1,26 @@
-function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
-  }
-}
+function validateForm() {
+   
+    let nid = document.getElementById("nid").value.trim();
+    if (nid.length !== 13 || isNaN(nid)) {
+        alert("National ID must be exactly 13 digits and numeric only!");
+        return false;
+    }
 
-function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
-  }
-}
 
-function validateForm(){
-	if(!checkNID()){
-	  alert("Invalid value for National ID!");
-	  document.getElementById("nid").focus();
-	  return false;
-	}else{
-		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
-		  document.getElementById("workDays").focus();
-		  return false;
-		}else{
-			total = payRateCalculate();
-			alert("Your weekly pay rate is "+total+" THB");
-			return false;
-		}
-	}
+    let genderSelected = document.querySelector('input[name="genderRad"]:checked');
+    if (!genderSelected) {
+        alert("Please select your Gender!");
+        return false;
+    }
+
+    
+    let days = parseInt(document.getElementById("workDays").value);
+    if (days < 1 || days > 6 || isNaN(days)) {
+        alert("You can work between 1 and 6 days only!");
+        return false;
+    }
+
+    
+    payRateCalculate();
+    return false; 
 }

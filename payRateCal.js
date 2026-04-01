@@ -1,10 +1,9 @@
 function payRateCalculate() {
-  let workDays = (document.getElementById("workDays").value).trim();
-  let selectObj = document.getElementById("year");
-  let yearOfStudy = parseInt(selectObj.options[selectObj.selectedIndex].value);
-  //alert("yearOfStudy = "+yearOfStudy);
+  let days = parseInt(document.getElementById("workDays").value);
+  let hourlyRate = parseInt(document.getElementById("year").value);
   
-  return 0;
+
+  let totalPay = hourlyRate * 5 * days;
+  
+  alert("Your weekly pay rate is " + totalPay + " THB");
 }
-
-
