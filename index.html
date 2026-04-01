@@ -34,6 +34,26 @@
       </div>
     </div>
   </nav>
+  <div id="popupModal" style="display:block; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999;">
+  <div style="background:white; width:400px; margin:100px auto; padding:20px; border-radius:10px; position:relative;">
+    <button onclick="document.getElementById('popupModal').style.display='none'" 
+      style="position:absolute; top:10px; right:15px; border:none; background:none; font-size:20px;">✕</button>
+    <h5>งานสัมมนาน่าสนใจ ลงทะเบียนด่วน!!!</h5>
+    <hr>
+    <h4 style="color:#0066cc;">Data Analytics for MarTech</h4>
+    <p>ถอดรหัสข้อมูล สู่เทคโนโลยีตลาดยุคใหม่</p>
+    <p><strong>หัวข้อหลัก:</strong></p>
+    <ul>
+      <li>MarTech และนวัตกรรมทางการตลาด</li>
+      <li>บทบาทที่เปลี่ยนไปของ Data Analytics</li>
+      <li>Data-driven decision ในการตลาด</li>
+    </ul>
+    <p><strong>เวลา:</strong> วันที่ 31 มีนาคม 2569 เวลา 13.00 - 16.00น.</p>
+    <p><strong>สถานที่:</strong> อาคาร 10 ชั้น 3</p>
+    <button onclick="document.getElementById('popupModal').style.display='none'" 
+      class="btn btn-primary w-100 mt-2">ปิด</button>
+  </div>
+</div>
   
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
