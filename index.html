@@ -26,8 +26,8 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="job1.html">นักศึกษาช่วยสอน (Student demonstrator)</a></li>
-              <li><a class="dropdown-item" href="#">Job#2</a></li>
-              <li><a class="dropdown-item" href="#">Job#3</a></li>
+              <li><a class="dropdown-item" href="job2.html">IT Support</a></li>
+              <li><a class="dropdown-item" href="job3.html">ผู้ช่วยวิจัย (Research Assistant)</a></li>
             </ul>
           </li>
         </ul>
@@ -82,5 +82,27 @@
     <button type="reset" class="btn btn-primary">Reset</button>
 </form><br><br>
 </div>
+<div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="promoModalLabel">งานสัมมนาน่าสนใจ ลงทะเบียนด่วน!!!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <img src="images/data analyst meeting.jpg" class="img-fluid" alt="Seminar Poster">
+      </div>
+
+    </div>
+  </div>
+</div>
 </body>
+<script>
+  window.onload = function() {
+    var modal = new bootstrap.Modal(document.getElementById('promoModal'));
+    modal.show();
+  };
+</script>
 </html>
