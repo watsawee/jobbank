@@ -15,20 +15,44 @@ function checkWorkDays() {
   return true;
 }
 
-function validateForm(){
-	if(!checkNID()){
-	  alert("Invalid value for National ID!");
-	  document.getElementById("nid").focus();
-	  return false;
-	}else{
-		if(!checkWorkDays()){
-		  alert("Invalid value for days of work!");
-		  document.getElementById("workDays").focus();
-		  return false;
-		}else{
-			total = payRateCalculate();
-			alert("Your weekly pay rate is "+total+" THB");
-			return false;
-		}
-	}
+function checkGender() {
+  let radios = document.getElementsByName("genderRad");
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) return true;
+  }
+  return false;
+}
+
+function validateForm() {
+  let fname = (document.getElementById("fname").value).trim();
+  let lname = (document.getElementById("lname").value).trim();
+
+  if (!checkNID()) {
+    alert("National ID must be exactly 13 digits and numbers only!");
+    document.getElementById("nid").focus();
+    return false;
+  }
+  if (fname === "") {
+    alert("Please enter your First Name!");
+    document.getElementById("fname").focus();
+    return false;
+  }
+  if (lname === "") {
+    alert("Please enter your Last Name!");
+    document.getElementById("lname").focus();
+    return false;
+  }
+  if (!checkGender()) {
+    alert("Please select your Gender!");
+    return false;
+  }
+  if (!checkWorkDays()) {
+    alert("Days of work must be between 1 and 6!");
+    document.getElementById("workDays").focus();
+    return false;
+  }
+
+  let total = payRateCalculate();
+  alert("Your weekly pay rate is " + total + " THB");
+  return false;
 }
