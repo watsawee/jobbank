@@ -1,20 +1,21 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
+	let nid = (document.getElementById("nid").value).trim();
+	if (isNaN(nid) || nid.length !== 13) {
+	  return false;
+	} else {
+	  return true;
+	}
   }
-}
-
-function checkWorkDays() {
-  let num = (document.getElementById("workDays").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  
+  function checkWorkDays() {
+	let num = (document.getElementById("workDays").value).trim();
+	let days = parseInt(num);
+	if (isNaN(days) || days < 1 || days > 6) {
+	  return false;
+	} else {
+	  return true;
+	}
   }
-}
 
 function validateForm(){
 	if(!checkNID()){
