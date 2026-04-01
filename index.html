@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Student Job Bank System</title>
   <meta charset="utf-8">
@@ -8,53 +9,57 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="validate.js"></script>
   <script src="payRateCal.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container mt-3">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Student Job Bank System</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Job Opportunities
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="job1.html">นักศึกษาช่วยสอน (Student demonstrator)</a></li>
-              <li><a class="dropdown-item" href="#">Job#2</a></li>
-              <li><a class="dropdown-item" href="#">Job#3</a></li>
-            </ul>
-          </li>
-        </ul>
+  <div class="container mt-3">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Student Job Bank System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Job Opportunities
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="job1.html">นักศึกษาช่วยสอน (Student demonstrator)</a></li>
+                <li><a class="dropdown-item" href="job2.html">ผู้ช่วยวิจัย (Research Assistant)</a></li>
+                <li><a class="dropdown-item" href="#">Job#3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  
-  <form action="#" method="post" onsubmit="return validateForm()">
-    <div class="mb-3 mt-3">
+    </nav>
+
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
-    </div>
-    <div class="mb-3 mt-3">
+        <input type="text" class="form-control" id="nid" name="nid" />
+      </div>
+      <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
-    </div>
-    <div class="mb-3 mt-3">
+        <input type="text" class="form-control" id="fname" name="fname" />
+      </div>
+      <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
-    </div>
-    <div class="mb-3 mt-3">
+        <input type="text" class="form-control" id="lname" name="lname" />
+      </div>
+      <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
         <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
-		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
         <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
-    </div>
-    <div class="mb-3 mt-3">
+      </div>
+      <div class="mb-3 mt-3">
         <label for="school" class="form-label">School<span style="color:red">*</span></label>
         <select class="form-select" id="school" name="shool">
           <option value="1">School of Science and Technology</option>
@@ -62,25 +67,50 @@
           <option value="3">School of Law</option>
           <option value="4">School of Art and Design</option>
         </select>
-    </div>
-    <div class="mb-3 mt-3">
-      <label for="year" class="form-label">Year of Study<span style="color:red">*</span></label>
-      <select class="form-select" id="year" name="year">
-        <option value="1">1st Year (55 THB/hour)</option>
-        <option value="2">2nd Year (65 THB/hour)</option>
-        <option value="3">3rd Year (75 THB/hour)</option>
-        <option value="4">4th Year or Greater (85 THB/hour)</option>
-      </select>
-    </div>
-    <div class="mb-3 mt-3">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="year" class="form-label">Year of Study<span style="color:red">*</span></label>
+        <select class="form-select" id="year" name="year">
+          <option value="1">1st Year (55 THB/hour)</option>
+          <option value="2">2nd Year (65 THB/hour)</option>
+          <option value="3">3rd Year (75 THB/hour)</option>
+          <option value="4">4th Year or Greater (85 THB/hour)</option>
+        </select>
+      </div>
+      <div class="mb-3 mt-3">
         <label for="workDays" class="form-label">How many days a week can you work? (Max 6 days/week)
-        <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="workDays" name="workDays"/>
+          <span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="workDays" name="workDays" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="reset" class="btn btn-primary">Reset</button>
+    </form><br><br>
+  </div>
+
+
+  <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-bold" id="promoModalLabel">งานสัมมนาน่าสนใจ ลงทะเบียนด่วน!!!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-0 pb-4">
+
+          <img src="images/promote_job1.png" alt="Data Analytics for MarTech" class="img-fluid" style="max-width: 90%;">
+        </div>
+      </div>
     </div>
-	
-    <button type="submit" class="btn btn-primary">Register</button>
-    <button type="reset" class="btn btn-primary">Reset</button>
-</form><br><br>
-</div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var promoModal = new bootstrap.Modal(document.getElementById('promoModal'));
+      promoModal.show();
+    });
+  </script>
+
 </body>
+
 </html>
