@@ -38,7 +38,7 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
+        <input type="text" class="form-control" id="nid" name="nid" maxlength="13" />
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
@@ -50,13 +50,13 @@
     </div>
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1">&nbsp; Male &nbsp;&nbsp;
-		    <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female &nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="3">&nbsp; Other
+        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="Male">&nbsp; Male &nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender2" name="genderRad" value="Female">&nbsp; Female &nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender3" name="genderRad" value="Other">&nbsp; Other
     </div>
     <div class="mb-3 mt-3">
         <label for="school" class="form-label">School<span style="color:red">*</span></label>
-        <select class="form-select" id="school" name="shool">
+        <select class="form-select" id="school" name="school">
           <option value="1">School of Science and Technology</option>
           <option value="2">School of Business Administration</option>
           <option value="3">School of Law</option>
@@ -66,6 +66,7 @@
     <div class="mb-3 mt-3">
       <label for="year" class="form-label">Year of Study<span style="color:red">*</span></label>
       <select class="form-select" id="year" name="year">
+        <option value="">-- Select Year of Study --</option>
         <option value="1">1st Year (55 THB/hour)</option>
         <option value="2">2nd Year (65 THB/hour)</option>
         <option value="3">3rd Year (75 THB/hour)</option>
