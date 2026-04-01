@@ -1,10 +1,9 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if(isNaN(nid)){
-	return false;
-  }else{
-	return true;
-  }
+  if (nid === "") return false;
+  if (isNaN(nid)) return false;
+  if (nid.length !== 13) return false;
+  return true;
 }
 
 function checkWorkDays() {
